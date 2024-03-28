@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_register_screen/widget/custom_text_filed.dart';
 
 import '../widget/custom_button_key.dart';
+import 'create_new_password.dart';
 
 class CheckEmailScreen extends StatelessWidget {
   const CheckEmailScreen({super.key});
@@ -53,6 +54,12 @@ class CheckEmailScreen extends StatelessWidget {
                     CustomButtonKey(
                         text: 'Recover my password',
                         onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CreateNewPassword(),
+                            ),
+                          );
                         }),
                   ],
                 ),

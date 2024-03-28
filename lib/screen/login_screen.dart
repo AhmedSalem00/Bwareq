@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:login_register_screen/screen/create_new_password.dart';
+import 'package:login_register_screen/screen/check_email_screen.dart';
 import 'package:login_register_screen/screen/sign_up_screen.dart';
 import 'package:login_register_screen/widget/custom_text_filed.dart';
-
 import '../widget/custom_button_key.dart';
+import 'package:flutter/services.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -14,6 +14,15 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool isCheckedRemember = false;
+
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+    ]);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       width: deviceSize.width * 0.5,
                       child: const CustomTextFormFiled(
+                        obscureText: true,
                         hintText: 'Password',
                       ),
                     ),
@@ -76,7 +86,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const CreateNewPassword()),
+                                  builder: (context) =>
+                                      const CheckEmailScreen()),
                             );
                           },
                           child: const Text(
@@ -100,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     const SizedBox(height: 25),
-                    const CustomButtonKey(text: 'Login'),
+                    CustomButtonKey(text: 'Login', onPressed: () {}),
                     TextButton(
                       onPressed: () {
                         Navigator.push(

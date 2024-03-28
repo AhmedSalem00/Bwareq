@@ -2,17 +2,16 @@ import 'package:flutter/material.dart';
 
 class CustomTextFormFiled extends StatelessWidget {
   final String? hintText;
-  final TextEditingController? textEditingController;
+  final bool? obscureText;
   const CustomTextFormFiled({
     Key? key,
-    required this.hintText, this.textEditingController
+    required this.hintText,   this.obscureText
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: textEditingController,
-      obscureText: true,
+      obscureText: obscureText ?? false,
       decoration:  InputDecoration(
         focusedBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(4)),

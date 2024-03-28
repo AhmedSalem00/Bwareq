@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:login_register_screen/screen/organization_screen.dart';
-import 'package:login_register_screen/screen/sign_up_screen.dart';
 
 import '../widget/custom_button_key.dart';
 import 'individual_screen.dart';

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:login_register_screen/screen/check_email_screen.dart';
 import 'package:login_register_screen/widget/custom_button_key.dart';
 import 'package:login_register_screen/widget/custom_text_filed.dart';
+
+import 'login_screen.dart';
 
 class CreateNewPassword extends StatelessWidget {
   const CreateNewPassword({super.key});
@@ -46,6 +47,7 @@ class CreateNewPassword extends StatelessWidget {
                     SizedBox(
                       width: deviceSize.width * 0.5,
                       child: const CustomTextFormFiled(
+                        obscureText: true,
                         hintText: '***********',
                       ),
                     ),
@@ -57,6 +59,7 @@ class CreateNewPassword extends StatelessWidget {
                     SizedBox(
                       width: deviceSize.width * 0.5,
                       child: const CustomTextFormFiled(
+                        obscureText: true,
                         hintText: '**********',
                       ),
                     ),
@@ -65,7 +68,7 @@ class CreateNewPassword extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CheckEmailScreen(),
+                            builder: (context) => const LoginScreen(),
                         ),
                       );
                     }),

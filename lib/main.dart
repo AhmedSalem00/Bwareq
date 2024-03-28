@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:login_register_screen/screen/account_type_screen.dart';
 
 import 'screen/login_screen.dart';
 

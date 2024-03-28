@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_register_screen/screen/login_screen.dart';
 import '../widget/custom_button_key.dart';
 import '../widget/custom_text_filed.dart';
-import 'create_new_password.dart';
+import 'account_type_screen.dart';
 
 class SignScreen extends StatelessWidget {
   const SignScreen({Key? key}) : super(key: key);
@@ -69,6 +69,7 @@ class SignScreen extends StatelessWidget {
                    SizedBox(
                     width: deviceSize.width * 0.5,
                     child: const CustomTextFormFiled(
+                      obscureText: true,
                       hintText: 'Password',
 
                     ),
@@ -78,7 +79,7 @@ class SignScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const CreateNewPassword()),
+                          builder: (context) => const AccountTypeScreen()),
                     );
                   }),
 
@@ -87,7 +88,7 @@ class SignScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>  LoginScreen()),
+                            builder: (context) =>  const LoginScreen()),
                       );
                     },
                     child: const Text('You already have an account? Login'),

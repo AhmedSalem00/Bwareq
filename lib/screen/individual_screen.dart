@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_register_screen/widget/custom_text_filed.dart';
 
 import '../widget/custom_button_key.dart';
+import 'account_type_screen.dart';
 
 class IndividualScreeen extends StatelessWidget {
   const IndividualScreeen({Key? key}) : super(key: key);
@@ -84,7 +85,13 @@ class IndividualScreeen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 25),
-                  const CustomButtonKey(text: 'Next'),
+                   CustomButtonKey(text: 'Next',onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AccountTypeScreen()),
+                    );
+                  }),
                 ],
               ),
             ),
